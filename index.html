@@ -1,91 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MX Analytics - El poder de los datos</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #004aad, #007aff);
             color: #fff;
+            line-height: 1.6;
         }
         header {
             text-align: center;
-            padding: 80px 20px 40px;
+            padding: 60px 20px 30px;
+        }
+        header img {
+            width: 120px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in-out;
         }
         header h1 {
             font-size: 3em;
-            margin: 0;
+            margin-bottom: 10px;
         }
         header p {
             font-size: 1.2em;
-            margin-top: 10px;
+            opacity: 0.9;
         }
         section {
             background: #fff;
             color: #333;
-            border-radius: 20px;
-            margin: 20px auto;
-            padding: 40px 20px;
-            max-width: 800px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px 30px;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+            animation: fadeInUp 1s ease-in-out;
         }
         section h2 {
-            margin-top: 0;
+            margin-bottom: 20px;
             color: #004aad;
+        }
+        section p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
         }
         .button {
             display: inline-block;
             background: #004aad;
             color: white;
-            padding: 12px 24px;
+            padding: 12px 30px;
             text-decoration: none;
-            border-radius: 30px;
-            margin-top: 20px;
+            border-radius: 50px;
+            font-size: 1em;
             transition: background 0.3s;
         }
         .button:hover {
             background: #002f6c;
         }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+        ul li::before {
+            content: '✅';
+            margin-right: 10px;
+            color: #004aad;
+        }
         footer {
             text-align: center;
             padding: 20px;
             font-size: 0.9em;
+            opacity: 0.8;
         }
         footer a {
             color: #fff;
             text-decoration: underline;
         }
-        ul {
-            list-style: none;
-            padding: 0;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
         }
-        li {
-            margin: 10px 0;
-            font-size: 1.1em;
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            section {
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="logo.png" alt="MX Analytics logo">
         <h1>MX Analytics 🚀</h1>
         <p>El poder de los datos en tus manos</p>
     </header>
     <section>
         <h2>¿Quiénes somos?</h2>
-        <p>Consultoría especializada en análisis de datos e inteligencia de negocios. Transformamos datos en decisiones estratégicas para hacer crecer tu negocio.</p>
+        <p>Somos expertos en consultoría de datos e inteligencia de negocios. Ayudamos a transformar datos en decisiones estratégicas para potenciar el crecimiento de tu empresa.</p>
         <a class="button" href="mailto:alfredo.mxanalytics@gmail.com">📩 Contáctanos</a>
     </section>
     <section>
         <h2>Servicios</h2>
         <ul>
-            <li>✅ Diseño de dashboards interactivos</li>
-            <li>✅ Análisis avanzado de datos</li>
-            <li>✅ Estrategias de inteligencia de negocios</li>
+            <li>Diseño de dashboards interactivos</li>
+            <li>Análisis avanzado de datos</li>
+            <li>Implementación de estrategias de inteligencia de negocios</li>
         </ul>
     </section>
     <footer>
